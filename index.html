@@ -13,39 +13,54 @@
 </head>
 <body>
 <div class="main-wrapper">
+<img class="back" src="images/back.png" alt="">
     <div class="container">
         <header>
             <nav class="nav">
                 <ul class="header-list">
-                    <li><a>
+                    <li><a href="#about">
                         Обо мне
                     </a></li>
-                    <li><a>
+                    <li><a href="#listen">
                         послушать
                     </a></li>
-                    <li><a>
+                    <li><a href="#equipment">
                         оборудование
                     </a></li>
-                    <li><a>
+                    <li><a href="#form">
                         анкета
                     </a></li>
-                    <li><a>
+                    <li><a href="#services">
                         услуги
                     </a></li>
-                    <li><a>
+                    <li><a href="#contacts">
                         контакты
                     </a></li>
                 </ul>
-                <div class="language">
-                    <span class="rus">RUS</span>
-                    <span class="en">EN</span>
-                    <img class="arrow" src="images/arr.svg" alt="">
+                <div class="language-select">
+                    <div class="selected-language">
+                        <img src="images/rus.png" alt="Russian Flag" class="flag">
+                        <span class="lang-text">RUS</span>
+                        <img src="images/arr.svg" alt="Arrow" class="arrow">
+                    </div>
+                    <div class="language-options">
+                        <div class="language-option" data-lang="rus">
+                            <img src="images/rus.png" alt="Russian Flag" class="flag">
+                            <span class="lang-text">RUS</span>
+                        </div>
+                        <div class="language-option" data-lang="en">
+                            <img src="images/rus.png" alt="USA Flag" class="flag">
+                            <span class="lang-text">EN</span>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
         <div class="header-link"><a href="#">связаться</a></div>
 
-        <h1 class="main-title"><span>Anton</span> Novikau</h1></div>
+        <h1 class="main-title"><span>Anton</span> Novikau</h1>
+        <h1 class="main-title__mob"><span>Anton</span> Novikau</h1>
+        <div class="header-link__mob"><a href="#">связаться</a></div>
 </div>
 <main>
     <section class="about" id="about">
@@ -538,7 +553,7 @@
     </section>
     <section class="form" id="form">
         <div class="container">
-            <h2 class="title">Анкета.</h2>
+            <h2 class="form-title title">Анкета.</h2>
             <div class="form-block">
                 <div class="first-info">
                     <div class="form-desc">
@@ -652,7 +667,7 @@
     <section class="services" id="services">
         <div class="container">
             <div>
-                <h2 class="title">Услуги.</h2>
+                <h2 class="services-title title">Услуги.</h2>
                 <ul class="services-list">
                     <li><img src="images/music.svg" alt="">
                         <p>Работа в клубах на постоянной основе</p></li>

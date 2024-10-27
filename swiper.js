@@ -85,12 +85,29 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 })
 
-let lang = document.querySelector('.language');
-let arr = document.querySelector('.arrow');
-let en  = document.querySelector('.en');
+const selectedLanguage = document.querySelector('.selected-language');
+const languageOptions = document.querySelector('.language-options');
+const arrow = document.querySelector('.arrow');
 
-lang.addEventListener('click', function () {
-    arr.classList.toggle('arrow--active');
-    en.classList.toggle('en');
-    console.log(en)
-})
+// Toggle dropdown visibility
+selectedLanguage.addEventListener('click', () => {
+    languageOptions.classList.toggle('visible');
+    arrow.classList.toggle('arrow-active');
+});
+
+// Handle language selection
+document.querySelectorAll('.language-option').forEach(option => {
+    option.addEventListener('click', () => {
+        const flagSrc = option.querySelector('.flag').src;
+        const langText = option.querySelector('.lang-text').textContent;
+
+        // Update selected language
+        selectedLanguage.querySelector('.flag').src = flagSrc;
+        selectedLanguage.querySelector('.lang-text').textContent = langText;
+
+        // Close dropdown
+        languageOptions.classList.remove('visible');
+        arrow.classList.remove('arrow-active');
+    });
+});
+
