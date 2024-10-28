@@ -43,7 +43,7 @@
 }
 
 .gallery-title {
-    margin: 250px auto 0px;
+    margin: 250px auto 0;
     text-align: center;
     font-weight: 700;
     font-size: 48px;
@@ -583,7 +583,7 @@ ul {
     background-size: cover;
     position: relative;
     transition: all 0.3s;
-    z-index: 100000;
+    z-index: 1000;
 }
 
 .listen-list__link:hover {
@@ -1227,7 +1227,7 @@ footer {
         height: 2.4px;
         background-color: black; /* Чёрный цвет по умолчанию */
         position: absolute;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
     }
 
     /* Первая линия */
@@ -1252,14 +1252,14 @@ footer {
     .burger-menu.active .line.top {
         transform: rotate(45deg);
         top: 50%;
-        left: 0px; /* Центрируем по горизонтали */
+        left: 0; /* Центрируем по горизонтали */
         transform-origin: center;
     }
 
     .burger-menu.active .line.bottom {
         transform: rotate(-45deg);
         bottom: 40%;
-        left: 0px; /* Центрируем по горизонтали */
+        left: 0; /* Центрируем по горизонтали */
         transform-origin: center;
     }
 
@@ -2037,3 +2037,32 @@ footer {
     }
 }
 
+@media screen and (max-width: 429px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .gallery .container {
+        padding: 0 5px;
+    }
+
+    .equipment-title{
+        font-size: 19px;
+    }
+
+    .main-title__mob {
+    font-size: 40px;
+    }
+
+    .services-img__mob {
+        width: 100%;
+    }
+
+    .diplomas-list li {
+        width: 47%;
+    }
+
+    .diplomas-list__img {
+        width: 100%;
+    }
+}
