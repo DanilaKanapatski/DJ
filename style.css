@@ -148,6 +148,13 @@ ul {
     transition: all 0.3s;
 }
 
+.selected-language-mob {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
 .language-options {
     display: none;
     position: absolute;
@@ -156,7 +163,23 @@ ul {
     z-index: 10;
 }
 
+.language-options-mob {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+}
+
 .language-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-option-mob {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -173,7 +196,16 @@ ul {
     height: 13px;
 }
 
+.flag1 {
+    width: 20px;
+    height: 13px;
+}
+
 .arrow {
+    transition: transform 0.3s;
+}
+
+.arrow1 {
     transition: transform 0.3s;
 }
 
@@ -243,13 +275,71 @@ ul {
     color: inherit;
 }
 
+.burger-menu {
+    width: 42px; /* Размер по ширине первой линии */
+    height: 31px; /* Размер по высоте второй линии */
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.line {
+    height: 2.4px;
+    background-color: black; /* Чёрный цвет по умолчанию */
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+/* Первая линия */
+.line.top {
+    width: 42px;
+    top: 0;
+}
+
+/* Вторая линия */
+.line.bottom {
+    width: 31px;
+    bottom: 0;
+}
+
+/* Активное состояние, когда меню открыто */
+.burger-menu.active .line {
+    background-color: #00FF00; /* Зелёный цвет для крестика */
+    width: 30px; /* Меняем длину линий на 30px */
+}
+
+.burger-menu.active .line.top {
+    transform: rotate(45deg);
+    top: 50%;
+    left: 6px; /* Центрируем по горизонтали */
+    transform-origin: center;
+}
+
+.burger-menu.active .line.bottom {
+    transform: rotate(-45deg);
+    bottom: 50%;
+    left: 6px; /* Центрируем по горизонтали */
+    transform-origin: center;
+}
+
 .main-title {
     font-family: Akony, sans-serif;
     font-weight: 700;
     font-size: 77px;
     text-transform: uppercase;
-    color: #fff;
     margin-top: 40px;
+    position: relative;
+    color: transparent; /* Сначала текст прозрачный */
+    background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.5s ease;
+}
+
+.main-title:hover {
+    background-position: -100% 0;
 }
 
 .main-title span {
@@ -1048,6 +1138,10 @@ footer {
     display: block;
 }
 
+.back-mob {
+    display: none;
+}
+
 /* Общие стили для слайдера */
 .swiper-container-1 {
     width: 100%;
@@ -1093,8 +1187,176 @@ footer {
     display: none;
 }
 
+.overlay {
+    display: none;
+}
+
+.burger-container {
+    display: none;
+}
+
 /* Стили для мобильной версии */
 @media screen and (max-width: 768px) {
+
+
+    .nav {
+        display: none;
+    }
+
+    /* Контейнер для бургер-меню */
+    .burger-container {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 2000; /* Поверх всего остального */
+    }
+
+    /* Бургер-меню */
+    .burger-menu {
+        width: 42px;
+        height: 10px;
+        position: fixed;
+        cursor: pointer;
+        z-index: 2001; /* Чтобы бургер был поверх затемнения */
+    }
+
+    /* Линии бургер-меню */
+    .line {
+        height: 2.4px;
+        background-color: black; /* Чёрный цвет по умолчанию */
+        position: absolute;
+        transition: all 0.3s ease;
+    }
+
+    /* Первая линия */
+    .line.top {
+        width: 42px;
+        top: 0;
+    }
+
+    /* Вторая линия */
+    .line.bottom {
+        width: 31px;
+        bottom: 0;
+        right: 0;
+    }
+
+    /* Активное состояние, когда меню открыто */
+    .burger-menu.active .line {
+        background-color: var(--accent); /* Зелёный цвет для крестика */
+        width: 30px; /* Меняем длину линий на 30px */
+    }
+
+    .burger-menu.active .line.top {
+        transform: rotate(45deg);
+        top: 50%;
+        left: 0px; /* Центрируем по горизонтали */
+        transform-origin: center;
+    }
+
+    .burger-menu.active .line.bottom {
+        transform: rotate(-45deg);
+        bottom: 40%;
+        left: 0px; /* Центрируем по горизонтали */
+        transform-origin: center;
+    }
+
+    .burger-menu.active {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Затемнение фона при открытии меню */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1D1E20; /* Черный фон с прозрачностью */
+        display: none;
+        justify-content: center;
+        padding: 35px 30px 0 30px;
+        align-items: center;
+        z-index: 1999; /* Под бургер-меню */
+        transition: all 0.3s ease;
+    }
+
+    /* Видимость меню при активации */
+    .overlay.active {
+        display: block;
+    }
+
+    /* Контент меню */
+    .menu-content {
+        color: white;
+    }
+
+    .title {
+
+        font-weight: 700;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .title span {
+        color: var(--accent);
+    }
+
+    .menu-list {
+        list-style: none;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 0;
+        font-family: Akony, sans-serif;
+        margin: 92px auto 0;
+        text-align: center;
+    }
+
+    .menu-list a {
+        color: inherit;
+    }
+
+    .menu-list li {
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .menu-list li:hover {
+        color: var(--accent);
+    }
+
+    .language__mob {
+        display: block;
+        margin: 109px auto 0;
+        position: relative;
+        z-index: 3000;
+    }
+
+    .back {
+        display: none;
+    }
+
+    .back-mob {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .language-select {
+        margin: 109px auto 0;
+        text-align: center;
+    }
+
+
     .container {
         max-width: 430px;
         padding: 0 30px;
@@ -1123,6 +1385,7 @@ footer {
     .main-title {
         display: none;
     }
+
     .header-link {
         display: none;
     }
@@ -1319,8 +1582,16 @@ footer {
         display: none;
     }
 
+    .listen-list__text {
+        font-size: 14px;
+    }
+
+    .listen-list__desc {
+        font-size: 17px;
+    }
+
     .listen-list__btn {
-        margin: 0 auto 0;
+        margin: 60px auto 0;
         font-weight: 700;
         font-size: 14px;
         text-transform: uppercase;
@@ -1347,6 +1618,46 @@ footer {
         gap: 27px 20px;
         align-items: center;
         justify-content: center;
+    }
+
+    .icons-list li:first-child svg {
+        width: 112px;
+        height: 27px;
+    }
+
+    .icons-list li:nth-child(2) svg {
+        width: 182px;
+        height: 27px;
+    }
+
+    .icons-list li:nth-child(3) svg {
+        width: 118px;
+        height: 36px;
+    }
+
+    .icons-list li:nth-child(4) svg {
+        width: 146px;
+        height: 35px;
+    }
+
+    .icons-list li:nth-child(5) svg {
+        width: 127px;
+        height: 36px;
+    }
+
+    .icons-list li:nth-child(6) svg {
+        width: 179px;
+        height: 36px;
+    }
+
+    .icons-list li:nth-child(7) svg {
+        width: 134px;
+        height: 29px;
+    }
+
+    .icons-list li:nth-child(8) svg {
+        width: 182px;
+        height: 37px;
     }
 
     /*equipment*/

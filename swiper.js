@@ -87,13 +87,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const selectedLanguage = document.querySelector('.selected-language');
 const languageOptions = document.querySelector('.language-options');
+const languageOptions1 = document.querySelector('.language-options-mob');
 const arrow = document.querySelector('.arrow');
+const arrow1 = document.querySelector('.arrow-mob');
+const sel = document.querySelector('.selected-language-mob');
+console.log(sel)
+console.log(languageOptions1)
 
 // Toggle dropdown visibility
 selectedLanguage.addEventListener('click', () => {
     languageOptions.classList.toggle('visible');
     arrow.classList.toggle('arrow-active');
 });
+
+sel.addEventListener('click', () => {
+    languageOptions1.classList.toggle('visible');
+    console.log(1)
+    arrow1.classList.toggle('arrow-active');
+});
+
+// sel.addEventListener('click', () => {
+//     languageOptions.classList.toggle('visible');
+//     console.log(1)
+//     arrow.classList.toggle('arrow-active');
+// });
 
 // Handle language selection
 document.querySelectorAll('.language-option').forEach(option => {
@@ -110,4 +127,41 @@ document.querySelectorAll('.language-option').forEach(option => {
         arrow.classList.remove('arrow-active');
     });
 });
+
+document.querySelectorAll('.language-option-mob').forEach(option => {
+    option.addEventListener('click', () => {
+        const flagSrc = option.querySelector('.flag1').src;
+        const langText = option.querySelector('.lang-text1').textContent;
+
+        // Update selected language
+        sel.querySelector('.flag1').src = flagSrc;
+        sel.querySelector('.lang-text1').textContent = langText;
+
+        // Close dropdown
+        languageOptions1.classList.remove('visible');
+        arrow1.classList.remove('arrow-active');
+    });
+});
+
+
+    const overlay = document.querySelector('.overlay');
+    const burgerMenu = document.querySelector('.burger-menu');
+function toggleMenu() {
+
+
+
+    // Переключаем класс 'active' для анимации
+    burgerMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+
+}
+
+const links = document.querySelectorAll('.menu-list a')
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        burgerMenu.classList.remove('active');
+    })
+})
 
