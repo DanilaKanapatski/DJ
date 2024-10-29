@@ -112,8 +112,15 @@ ul {
 
 .main-wrapper {
     background-image: url("./images/main.png");
-    height: 810px;
+    height: 100vh;
     background-size: cover;
+}
+
+.main-wrapper .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .header-list {
@@ -237,7 +244,6 @@ ul {
 }
 
 .header-link {
-    margin-top: 527px;
     margin-left: 1092px;
     cursor: pointer;
     font-weight: 700;
@@ -327,7 +333,8 @@ ul {
     font-weight: 700;
     font-size: 77px;
     text-transform: uppercase;
-    margin-top: 40px;
+    margin-bottom: 45px;
+    margin-top: 50px;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
     background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
@@ -1393,6 +1400,8 @@ footer {
     .header-link__mob {
         display: block;
         margin-top: 35px;
+        margin-bottom: 55px;
+        margin-left: 172px;
         cursor: pointer;
         font-weight: 700;
         font-size: 15px;
@@ -1413,10 +1422,13 @@ footer {
         color: inherit;
     }
 
+    header {
+        display: none;
+    }
+
     .main-title__mob {
         display: block;
         font-size: 42px;
-        margin-top: 537px;
         font-family: Akony, sans-serif;
         font-weight: 700;
         text-transform: uppercase;
@@ -2059,7 +2071,7 @@ footer {
     }
 
     .diplomas-list li {
-        width: 47%;
+        width: 175px;
     }
 
     .diplomas-list__img {
