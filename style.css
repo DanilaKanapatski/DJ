@@ -437,6 +437,10 @@ ul {
     background: #fff;
 }
 
+.diplomas-list__img-mob {
+display: none;
+}
+
 .diplomas-list__desc {
     font-weight: 500;
     font-size: 18px;
@@ -1476,8 +1480,14 @@ footer {
     }
 
     .diplomas-list__img {
+        display: none;
         width: 175px;
         height: 247px;
+    }
+
+    .diplomas-list__img-mob {
+display: block;
+        width: 100%;
     }
 
     .diplomas-list__desc {
@@ -2080,9 +2090,9 @@ footer {
         gap: 25px 10px;
     }
 
-    .diplomas-list li {
-        width: 175px;
-    }
+    /*.diplomas-list li {*/
+    /*    width: 175px;*/
+    /*}*/
 
     .diplomas-list__img {
         width: 100%;
