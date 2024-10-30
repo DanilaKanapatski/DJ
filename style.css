@@ -390,6 +390,8 @@ ul {
 .about-list {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 10000;
 }
 
 /*diplomas*/
@@ -425,6 +427,8 @@ ul {
     margin-top: 30px;
     gap: 20px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 10000;
 }
 
 .diplomas-list__img {
@@ -1452,6 +1456,8 @@ footer {
     .swiper-container-1 {
         display: block;
         overflow: hidden;
+        position: relative;
+        z-index: 10000;
     }
 
     .diplomas-title {
