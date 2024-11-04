@@ -1,9 +1,9 @@
-@font-face {
-    font-family: 'Akony';
-    src: url('fonts/akony.woff') format('woff'),
-    url('fonts/akony.ttf') format('ttf'),
-    url('fonts/akony.otf') format('otf');
-}
+/*@font-face {*/
+/*    font-family: 'Akony';*/
+/*    src: url('fonts/akony.woff') format('woff'),*/
+/*    url('fonts/akony.ttf') format('ttf'),*/
+/*    url('fonts/akony.otf') format('otf');*/
+/*}*/
 
 :root {
     --accent: #00FFA2;
@@ -26,8 +26,9 @@
 
 .section-title {
     font-weight: 700;
-    font-size: 20px;
-    font-family: Akony, sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-family: "Jura", sans-serif;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
     background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
@@ -45,9 +46,10 @@
 .gallery-title {
     margin: 250px auto 0;
     text-align: center;
+    text-transform: capitalize;
     font-weight: 700;
     font-size: 48px;
-    font-family: Akony, sans-serif;
+    font-family: "Jura", sans-serif;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
     background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
@@ -58,16 +60,72 @@
     transition: background-position 0.5s ease;
 }
 
+.title {
+    font-weight: 700;
+    font-size: 72px;
+    font-family: "Jura", sans-serif;
+}
+
 .gallery-title:hover {
     background-position: -100% 0;
 }
 
-
-.title {
+.listen-title {
     font-weight: 700;
-    font-size: 48px;
-    font-family: Akony, sans-serif;
+    font-size: 72px;
+    font-family: "Jura", sans-serif;
+    position: relative;
+    color: transparent; /* Сначала текст прозрачный */
+    background-image: linear-gradient(to right, #00FFA2 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.7s ease;
 }
+
+.listen-title:hover {
+    background-position: -100% 0;
+}
+
+.video-title {
+    font-weight: 700;
+    font-size: 72px;
+    font-family: "Jura", sans-serif;
+    position: relative;
+    color: transparent; /* Сначала текст прозрачный */
+    background-image: linear-gradient(to right, #00FFA2 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.7s ease;
+}
+
+.video-title:hover {
+    background-position: -100% 0;
+}
+
+
+.equipment-title {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 72px;
+    font-family: "Jura", sans-serif;
+    position: relative;
+    color: transparent; /* Сначала текст прозрачный */
+    background-image: linear-gradient(to right, #00FFA2 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.7s ease;
+}
+
+.equipment-title:hover {
+    background-position: -100% 0;
+}
+
 
 .text {
     font-weight: 500;
@@ -125,11 +183,12 @@ ul {
 
 .header-list {
     display: flex;
-    gap: 51.8px;
+    gap: 82.5px;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 20px;
+    text-transform: capitalize;
     color: #fff;
-    font-family: 'Akony', sans-serif;
+    font-family: "Jura", sans-serif;
     z-index: 100;
 }
 
@@ -139,11 +198,12 @@ ul {
 }
 
 .language-select {
+    font-family: "Jura", sans-serif;
     position: relative;
     width: max-content;
     cursor: pointer;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 20px;
     z-index: 10;
     color: var(--accent);
 }
@@ -151,7 +211,7 @@ ul {
 .selected-language {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     transition: all 0.3s;
 }
 
@@ -181,7 +241,7 @@ ul {
 .language-option {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -329,12 +389,12 @@ ul {
 }
 
 .main-title {
-    font-family: Akony, sans-serif;
+    font-family: "Jura", sans-serif;
     font-weight: 700;
-    font-size: 77px;
+    font-size: 132px;
     text-transform: uppercase;
-    margin-bottom: 45px;
-    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-top: 14px;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
     background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
@@ -358,9 +418,9 @@ ul {
 }
 
 .about-title {
-    font-family: Akony, sans-serif;
+    font-family: "Jura", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 70px;
     margin-top: 150px;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
@@ -382,8 +442,8 @@ ul {
     font-weight: 500;
     font-size: 18px;
     color: #fff;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 100px;
     /*vertical-align: top;*/
 }
 
@@ -397,10 +457,10 @@ ul {
 /*diplomas*/
 
 .diplomas-title {
-    font-family: Akony, sans-serif;
+    font-family: "Jura", sans-serif;
     margin-top: 200px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 40px;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
     background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
@@ -419,7 +479,7 @@ ul {
     font-weight: 600;
     font-size: 22px;
     color: #fff;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .diplomas-list {
@@ -554,11 +614,10 @@ display: none;
 
 .listen-title {
     margin-top: 170px;
-    color: var(--accent);
 }
 
 .listen-desc {
-    margin-top: 40px;
+    margin-top: 8px;
     max-width: 636px;
 }
 
@@ -621,7 +680,7 @@ display: none;
 /*icons*/
 
 .icons-desc {
-    margin: 250px auto 0;
+    margin: 200px auto 0;
     max-width: 636px;
 }
 
@@ -648,9 +707,9 @@ display: none;
 
 .icons-list li:first-child:hover svg {
     /* Градиентный фон с маской */
-    background-image: linear-gradient(180deg, #ff5e43 0%, #896cd8 100%);
-    -webkit-mask-image: url('images/apple.svg');
-    mask-image: url('images/apple.svg');
+    background-image: linear-gradient(180deg, #f8a01d 0%, #f26e23 71.28%, #ef5826 100%);
+    -webkit-mask-image: url('images/soundcloud.svg');
+    mask-image: url('images/soundcloud.svg');
     mask-size: contain;
     mask-repeat: no-repeat;
     display: inline-block;
@@ -661,35 +720,34 @@ display: none;
 }
 
 .icons-list li:nth-child(3):hover svg {
-    color: #2ebd59;
-}
-
-.icons-list li:nth-child(4):hover svg {
     color: #27a7e7;
 }
 
-.icons-list li:nth-child(5):hover svg {
-    color: #a238ff;
-}
-
-.icons-list li:nth-child(6):hover svg {
-    color: #ffbc0d;
-}
-
-.icons-list li:nth-child(7):hover svg {
+.icons-list li:nth-child(4):hover svg {
     color: #07f;
 }
 
-.icons-list li:nth-child(8):hover svg {
-    color: #4401ff;
-}
+/*.icons-list li:nth-child(5):hover svg {*/
+/*    color: #a238ff;*/
+/*}*/
+
+/*.icons-list li:nth-child(6):hover svg {*/
+/*    color: #ffbc0d;*/
+/*}*/
+
+/*.icons-list li:nth-child(7):hover svg {*/
+/*    color: #07f;*/
+/*}*/
+
+/*.icons-list li:nth-child(8):hover svg {*/
+/*    color: #4401ff;*/
+/*}*/
 
 /*equipment*/
 
 .equipment-title {
-    color: var(--accent);
-    margin-top: 294px;
-    margin-bottom: 60px;
+    margin-top: 250px;
+    margin-bottom: 28px;
 }
 
 .equipment-content {
@@ -700,7 +758,7 @@ display: none;
 
 .equipment-text {
     max-width: 636px;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .equipment-text__name {
@@ -721,7 +779,7 @@ display: none;
 }
 
 .equipment-text__other-name {
-    margin-top: 30px;
+    margin-top: 5px;
     font-weight: 700;
     font-size: 26px;
     display: block;
@@ -735,7 +793,7 @@ display: none;
 }
 
 .gallery-list {
-    margin-top: 100px;
+    margin-top: 68px;
     position: relative;
     height: 1192px;
 }
@@ -807,8 +865,7 @@ display: none;
 
 .video-title {
     margin-top: 250px;
-    color: var(--accent);
-    margin-bottom: 40px;
+    margin-bottom: 8px;
 }
 
 .video-desc {
@@ -884,7 +941,7 @@ display: none;
 }
 
 .form-title {
-    font-family: Akony, sans-serif;
+    font-family: "Jura", sans-serif;
     font-weight: 700;
     font-size: 48px;
     position: relative;
@@ -994,9 +1051,9 @@ display: none;
 /*services*/
 
 .services-title {
-    font-family: Akony, sans-serif;
+    font-family: "Jura", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 72px;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
     background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
@@ -1015,7 +1072,7 @@ display: none;
 .services .container {
     display: flex;
     justify-content: space-between;
-    margin-top: 214px;
+    margin-top: 250px;
 }
 
 .services-list {
@@ -1040,9 +1097,27 @@ display: none;
 }
 
 .contacts-title {
-    color: var(--accent);
     margin-top: 301px;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.contacts-title {
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    position: relative;
+    color: transparent; /* Сначала текст прозрачный */
+    background-image: linear-gradient(to right, #00FFA2 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.5s ease;
+}
+
+.contacts-title:hover {
+    background-position: -100% 0;
 }
 
 .contacts-list {
@@ -1113,6 +1188,7 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     padding-bottom: 71px;
+    align-items: center;
 }
 
 .footer-content span {
@@ -1122,14 +1198,16 @@ footer {
 .footer-list {
     display: flex;
     justify-content: space-between;
-    gap: 12.4px;
+    gap: 55px;
+    align-items: center;
     z-index: 100;
 }
 
 .footer-list a {
-    font-family: Akony, sans-serif;
+    font-family: "Jura", sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 20px;
+    text-transform: capitalize;
     color: #fff;
 }
 
@@ -1140,7 +1218,7 @@ footer {
 .divider {
     width: 100%;
     position: absolute;
-    top: 93px;
+    top: 108px;
     left: 0;
     height: 1px;
     background: #fff;
@@ -1293,7 +1371,7 @@ footer {
         background-color: #1D1E20; /* Черный фон с прозрачностью */
         display: none;
         justify-content: center;
-        padding: 35px 30px 0 30px;
+        padding: 25px 30px 0 30px;
         align-items: center;
         z-index: 1999; /* Под бургер-меню */
         transition: all 0.3s ease;
@@ -1323,9 +1401,9 @@ footer {
     .menu-list {
         list-style: none;
         font-weight: 700;
-        font-size: 15px;
+        font-size: 25px;
         padding: 0;
-        font-family: Akony, sans-serif;
+        font-family: "Jura", sans-serif;
         margin: 92px auto 0;
         text-align: center;
     }
@@ -1335,7 +1413,8 @@ footer {
     }
 
     .menu-list li {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
+        text-transform: capitalize;
         cursor: pointer;
         transition: color 0.3s;
     }
@@ -1346,7 +1425,7 @@ footer {
 
     .language__mob {
         display: block;
-        margin: 109px auto 0;
+        margin: 114px auto 0;
         position: relative;
         z-index: 3000;
     }
@@ -1378,11 +1457,11 @@ footer {
     }
 
     .section-title {
-        font-size: 15px;
+        font-size: 30px;
     }
 
     .title {
-        font-size: 26px;
+        font-size: 50px;
     }
 
     .text {
@@ -1407,8 +1486,8 @@ footer {
 
     .header-link__mob {
         display: block;
-        margin-top: 35px;
-        margin-bottom: 55px;
+        margin-top: 30px;
+        margin-bottom: 50px;
         margin-left: 172px;
         cursor: pointer;
         font-weight: 700;
@@ -1436,21 +1515,21 @@ footer {
 
     .main-title__mob {
         display: block;
-        font-size: 42px;
-        font-family: Akony, sans-serif;
+        font-size: 65px;
+        font-family: "Jura", sans-serif;
         font-weight: 700;
-        text-transform: uppercase;
+        text-transform: capitalize;
         color: #fff;
     }
 
     .about-title {
-        font-size: 26px;
+        font-size: 50px;
     }
 
     .about-desc {
         font-size: 14px;
-        margin-top: 30px;
-        margin-bottom: 60px;
+        margin-top: 10px;
+        margin-bottom: 50px;
     }
 
     .about-list {
@@ -1466,12 +1545,12 @@ footer {
 
     .diplomas-title {
         margin-top: 120px;
-        font-size: 15px;
+        font-size: 30px;
     }
 
     .diplomas-name {
         font-size: 18px;
-        margin-top: 25px;
+        margin-top: 7px;
     }
 
     .diplomas-list {
@@ -1486,7 +1565,7 @@ footer {
     }
 
     .diplomas-list__img-mob {
-display: block;
+        display: block;
         width: 100%;
     }
 
@@ -1533,6 +1612,7 @@ display: block;
         margin-top: 120px;
         background-size: cover;
         padding-bottom: 37px;
+        padding-top: 0;
     }
 
     .experience .container {
@@ -1594,11 +1674,11 @@ display: block;
 
     /*listen*/
     .listen-desc {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     .listen-list {
-        margin-top: 60px;
+        margin-top: 50px;
         gap: 60px;
     }
 
@@ -1649,50 +1729,50 @@ display: block;
     }
 
     .icons-list li:first-child svg {
-        width: 112px;
+        width: 222px;
         height: 27px;
     }
 
     .icons-list li:nth-child(2) svg {
-        width: 182px;
+        width: 118px;
         height: 27px;
     }
 
     .icons-list li:nth-child(3) svg {
-        width: 118px;
-        height: 36px;
-    }
-
-    .icons-list li:nth-child(4) svg {
         width: 146px;
         height: 35px;
     }
 
-    .icons-list li:nth-child(5) svg {
-        width: 127px;
+    .icons-list li:nth-child(4) svg {
+        width: 178px;
         height: 36px;
     }
 
-    .icons-list li:nth-child(6) svg {
-        width: 179px;
-        height: 36px;
-    }
+    /*.icons-list li:nth-child(5) svg {*/
+    /*    width: 127px;*/
+    /*    height: 36px;*/
+    /*}*/
 
-    .icons-list li:nth-child(7) svg {
-        width: 134px;
-        height: 29px;
-    }
+    /*.icons-list li:nth-child(6) svg {*/
+    /*    width: 179px;*/
+    /*    height: 36px;*/
+    /*}*/
 
-    .icons-list li:nth-child(8) svg {
-        width: 182px;
-        height: 37px;
-    }
+    /*.icons-list li:nth-child(7) svg {*/
+    /*    width: 134px;*/
+    /*    height: 29px;*/
+    /*}*/
+
+    /*.icons-list li:nth-child(8) svg {*/
+    /*    width: 182px;*/
+    /*    height: 37px;*/
+    /*}*/
 
     /*equipment*/
     .equipment-title {
-        margin-top: 214px;
-        font-size: 21px;
-        margin-bottom: 40px;
+        margin-top: 170px;
+        font-size: 45px;
+        margin-bottom: 10px;
     }
 
     .equipment-content {
@@ -1710,7 +1790,7 @@ display: block;
     }
 
     .equipment-text {
-        margin-top: 20px;
+        margin-top: 5px;
     }
 
     .equipment-text__name {
@@ -1727,7 +1807,7 @@ display: block;
     }
 
     .equipment-text__other-name {
-        margin-top: 20px;
+        margin-top: 5px;
         font-size: 18px;
     }
 
@@ -1822,7 +1902,7 @@ display: block;
 
     .video-title {
         margin-top: 170px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .video-desc {
@@ -2032,21 +2112,24 @@ display: block;
     }
 
     footer .section-title {
-        font-size: 16px;
+        font-size: 30px;
     }
 
     .footer-content {
-        padding-bottom: 80px;
+        padding-bottom: 40px;
+        align-items: flex-start;
     }
 
     .footer-list {
         flex-direction: column;
         justify-content: space-between;
-        gap: 12px;
+        gap: 5px;
+        align-items: normal;
     }
 
     .footer-list a {
-        font-size: 10px;
+        font-size: 20px;
+        text-align: left;
     }
 
     .divider {
