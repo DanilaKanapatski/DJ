@@ -488,7 +488,7 @@ ul {
     gap: 20px;
     flex-wrap: wrap;
     position: relative;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 .diplomas-list__img {
@@ -1540,7 +1540,7 @@ footer {
         display: block;
         overflow: hidden;
         position: relative;
-        z-index: 10000;
+        z-index: 1000;
     }
 
     .diplomas-title {
@@ -2146,6 +2146,10 @@ footer {
         margin: 20px 0;
         font-size: 12px;
     }
+
+    .active .title {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 429px) {
@@ -2162,7 +2166,7 @@ footer {
     }
 
     .main-title__mob {
-    font-size: 65px;
+    font-size: 63px;
     }
 
     .services-img__mob {
