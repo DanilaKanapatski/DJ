@@ -479,12 +479,12 @@ ul {
     font-weight: 600;
     font-size: 22px;
     color: #fff;
-    margin-top: 5px;
+    margin-top: 36px;
 }
 
 .diplomas-list {
     display: flex;
-    margin-top: 30px;
+    margin-top: 60px;
     gap: 20px;
     flex-wrap: wrap;
     position: relative;
@@ -505,7 +505,7 @@ display: none;
     font-weight: 500;
     font-size: 18px;
     color: #fff;
-    margin-top: 25px;
+    margin-top: 31px;
     max-width: 259px;
 }
 
@@ -569,7 +569,7 @@ display: none;
 
 .experience-desc {
     margin-top: 50px;
-    max-width: 635px;
+    max-width: 636px;
 }
 
 .experience-info {
@@ -596,18 +596,22 @@ display: none;
 }
 
 .experience-info__desc:nth-child(2) {
-    right: 0;
+    right: -15px;
     top: 198px;
+    max-width: 260px;
 }
 
 .experience-info__desc:nth-child(3) {
     text-align: right;
     bottom: 353px;
+    left: -42px;
+    max-width: 286px;
 }
 
 .experience-info__desc:nth-child(4) {
-    right: 0;
+    right: -32px;
     bottom: 147px;
+    max-width: 277px;
 }
 
 /*listen*/
@@ -747,7 +751,7 @@ display: none;
 
 .equipment-title {
     margin-top: 250px;
-    margin-bottom: 28px;
+    margin-bottom: 56px;
 }
 
 .equipment-content {
@@ -775,6 +779,10 @@ display: none;
 }
 
 .equipment-text__other {
+    margin-top: 60px;
+}
+
+.equipment-content__text {
     margin-top: 60px;
 }
 
