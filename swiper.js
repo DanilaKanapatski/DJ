@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 'auto',
         centeredSlides: true,
         spaceBetween: 0,
+        pagination: {
+            el: '.swiper-pagination', // Элемент пагинации
+            clickable: true, // Делаем пагинацию кликабельной
+        },
         loop: true,
         keyboard: {
             enabled: true,       // Включить управление с клавиатуры

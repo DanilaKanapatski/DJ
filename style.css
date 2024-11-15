@@ -211,7 +211,7 @@ ul {
 .selected-language {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     transition: all 0.3s;
 }
 
@@ -297,13 +297,14 @@ ul {
 }
 
 .nav {
-    padding-top: 45px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .header-link {
+    display: none;
     margin-left: 1092px;
     cursor: pointer;
     font-weight: 700;
@@ -393,8 +394,8 @@ ul {
     font-weight: 700;
     font-size: 132px;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    margin-top: 14px;
+    margin:  0 auto 10px;
+    text-align: center;
     position: relative;
     color: transparent; /* Сначала текст прозрачный */
     background-image: linear-gradient(to right, #ffffff 50%, #00FFA2 50%);
@@ -442,7 +443,7 @@ ul {
     font-weight: 500;
     font-size: 18px;
     color: #fff;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 100px;
     /*vertical-align: top;*/
 }
@@ -458,7 +459,7 @@ ul {
 
 .diplomas-title {
     font-family: "Jura", sans-serif;
-    margin-top: 200px;
+    margin-top: 150px;
     font-weight: 700;
     font-size: 40px;
     position: relative;
@@ -479,12 +480,12 @@ ul {
     font-weight: 600;
     font-size: 22px;
     color: #fff;
-    margin-top: 36px;
+    margin-top: 30px;
 }
 
 .diplomas-list {
     display: flex;
-    margin-top: 60px;
+    margin-top: 30px;
     gap: 20px;
     flex-wrap: wrap;
     position: relative;
@@ -505,7 +506,7 @@ display: none;
     font-weight: 500;
     font-size: 18px;
     color: #fff;
-    margin-top: 31px;
+    margin-top: 20px;
     max-width: 259px;
 }
 
@@ -555,33 +556,37 @@ display: none;
 
 .experience {
     background-image: url("images/experience.png");
-    margin-top: 159px;
-    padding-top: 41px;
+    margin-top: 94px;
+
     background-size: cover;
-    padding-bottom: 140px;
+    padding-bottom: 253px;
 }
 
 .experience .container {
+    padding-top: 106px;
+}
+
+.experience-title {
     margin-left: 328px;
-    max-width: 748px;
-    margin-top: 31px;
 }
 
 .experience-desc {
-    margin-top: 50px;
+    margin-top: 15px;
     max-width: 636px;
+    margin-left: 328px;
 }
 
 .experience-info {
     position: relative;
-    margin-top: 150px;
-    height: 840px;
+    margin-top: 141px;
+    margin-left: 286px;
+    height: 701px;
 }
 
 .experience-info img {
     position: absolute;
-    top: 7px;
-    left: 274px;
+    top: 8px;
+    left: 316px;
 }
 
 .experience-info__desc {
@@ -590,43 +595,43 @@ display: none;
 }
 
 .experience-info__desc:first-child {
-    top: -8px;
-    left: -1px;
+    top: auto;
+    left: 41px;
     text-align: right;
 }
 
 .experience-info__desc:nth-child(2) {
-    right: -15px;
-    top: 198px;
+    right: 190px;
+    top: 206px;
     max-width: 260px;
 }
 
 .experience-info__desc:nth-child(3) {
     text-align: right;
-    bottom: 353px;
-    left: -42px;
+    bottom: 206px;
+    left: 0px;
     max-width: 286px;
 }
 
 .experience-info__desc:nth-child(4) {
-    right: -32px;
-    bottom: 147px;
+    right: 165px;
+    bottom: 0;
     max-width: 277px;
 }
 
 /*listen*/
 
 .listen-title {
-    margin-top: 170px;
+    margin-top: 150px;
 }
 
 .listen-desc {
-    margin-top: 8px;
+    margin-top: 15px;
     max-width: 636px;
 }
 
 .listen-list {
-    margin-top: 100px;
+    margin-top: 115px;
     display: flex;
     gap: 100px 67px;
     flex-wrap: wrap;
@@ -681,19 +686,41 @@ display: none;
     color: inherit;
 }
 
+/*.parallax {*/
+/*    perspective: 1px;*/
+/*    height: 100vh;*/
+/*    overflow-y: auto;*/
+/*}*/
+
+/*.parallax-layer {*/
+/*    position: absolute;*/
+/*    inset: 0; // вместо top, bottom, left, right: 0;*/
+/*}*/
+
+/*.parallax-image {*/
+/*    transform: translateZ(0);*/
+/*}*/
+
+/*.parallax-text {*/
+/*    transform: translateZ(-2px);*/
+/*}*/
+
 /*icons*/
 
 .icons-desc {
     margin: 200px auto 0;
-    max-width: 636px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    max-width: 509px;
 }
 
 .icons-list {
     display: flex;
     flex-wrap: wrap;
     max-width: 1211px;
-    margin: 40px auto 0;
-    gap: 20px 40px;
+    margin: 50px auto 0;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     color: white;
@@ -751,7 +778,7 @@ display: none;
 
 .equipment-title {
     margin-top: 250px;
-    margin-bottom: 56px;
+    margin-bottom: 30px;
 }
 
 .equipment-content {
@@ -783,7 +810,7 @@ display: none;
 }
 
 .equipment-content__text {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .equipment-text__other-name {
@@ -793,10 +820,14 @@ display: none;
     display: block;
 }
 
+.equipment-desc {
+    margin-top: 23px;
+}
+
 /*gallery*/
 
 .gallery-title {
-    margin: 250px auto 0;
+    margin: 170px auto 0;
     text-align: center;
 }
 
@@ -873,12 +904,36 @@ display: none;
 
 .video-title {
     margin-top: 250px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .video-desc {
-    max-width: 636px;
-    margin-bottom: 100px;
+    font-size: 26px;
+    margin-bottom: 90px;
+}
+
+.swiper-pagination-bullet {
+    background: #d9d9d9 !important;
+    border-radius: 20px !important;
+    width: 16px !important;
+    height: 16px !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #7f7f7f !important;
+    opacity: 1 !important;
+
+}
+
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 30px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: gold;
+    opacity: 1;
 }
 
 .swiper-container-2 {
@@ -1080,14 +1135,14 @@ display: none;
 .services .container {
     display: flex;
     justify-content: space-between;
-    margin-top: 250px;
+    margin-top: 270px;
 }
 
 .services-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 40px;
+    margin-top: 18px;
 }
 
 .services-list li {
@@ -1101,11 +1156,11 @@ display: none;
 /*contacts*/
 
 .contacts .container {
-    max-width: 636px;
+    max-width: 657px;
 }
 
 .contacts-title {
-    margin-top: 301px;
+    margin-top: 250px;
     margin-bottom: 8px;
     text-transform: capitalize;
 }
@@ -1180,8 +1235,8 @@ display: none;
     mask-size: contain;
     mask-repeat: no-repeat;
     display: inline-block;
-    width: 33px;
-    height: 32px;
+    width: 25px;
+    height: 24px;
 }
 
 /*footer*/
