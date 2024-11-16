@@ -143,6 +143,103 @@ body {
     position: relative;
     background: #1D1D1F;
     color: #fff;
+    overflow-x: hidden;
+}
+
+.ell-1 {
+    position: absolute;
+    top: 326px;
+    left: -268px;
+    animation: rotate 2s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ell-2 {
+    position: absolute;
+    top: 15%;
+    left: -164px;
+    animation: rotate 2s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ell-3 {
+    position: absolute;
+    top: 24%;
+    left: -268px;
+    animation: rotate 2s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ell-4 {
+    position: absolute;
+    top: 36%;
+    left: -508px;
+    animation: rotate 3s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ell-5 {
+    position: absolute;
+    top: 46%;
+    left: 8px;
+    animation: rotate 3s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ell-6 {
+    position: absolute;
+    top: 52%;
+    right: -308px;
+    animation: rotate 3s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ell-7 {
+    position: absolute;
+    top: 65%;
+    right: 108px;
+    animation: rotate 3s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ellipse {
+    position: relative;
+    overflow: hidden;
+}
+
+.ell-8 {
+    position: absolute;
+    top: 85%;
+    right: 108px;
+    animation: rotate 3s linear infinite;
+    overflow: hidden;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.ell-9 {
+    position: absolute;
+    bottom: -520px;
+    left: -500px;
+    animation: rotate 3s linear infinite;
+    overflow: hidden;
+    will-change: transform;
+    /* 1 секунда, линейная анимация, бесконечно */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .back {
@@ -173,6 +270,8 @@ ul {
     height: 100vh;
     background-size: cover;
 }
+
+
 
 .main-wrapper .container {
     display: flex;
@@ -653,6 +752,11 @@ ul {
     z-index: 100;
 }
 
+.listen-list__img img{
+    position: relative;
+    z-index: 1;
+}
+
 .experience-desc-mob {
     display: none;
 }
@@ -674,8 +778,6 @@ ul {
 .listen-list__link {
     margin-top: 22px;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
     text-transform: uppercase;
     color: #fff;
     background-image: url("images/btn-over.png");
@@ -686,6 +788,17 @@ ul {
     position: relative;
     transition: all 0.3s;
     z-index: 1000;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.listen-list__link button {
+
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    color: inherit;
+
 }
 
 .listen-list__link:hover {
@@ -803,6 +916,8 @@ ul {
 .equipment-content {
     display: flex;
     justify-content: space-between;
+    z-index: 1;
+    position: relative;
     align-items: start;
 }
 
