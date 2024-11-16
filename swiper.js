@@ -177,3 +177,21 @@ document.getElementById('playButton').addEventListener('click', function() {
         audio.pause();
     }
 });
+
+document.getElementById('playButton2').addEventListener('click', function() {
+    let audio = document.getElementById('audioPlayer2');
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});
+
+document.getElementById('playButton3').addEventListener('click', function() {
+    let audio = document.getElementById('audioPlayer3');
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});

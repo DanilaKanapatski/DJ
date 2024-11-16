@@ -1488,6 +1488,101 @@ footer {
 /* Стили для мобильной версии */
 @media screen and (max-width: 768px) {
 
+    .ell-1 {
+        position: absolute;
+        top: 276px;
+        left: -400px;
+        animation: rotate 2s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ell-2 {
+        position: absolute;
+        top: 13%;
+        left: -364px;
+        animation: rotate 2s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ell-3 {
+        position: absolute;
+        top: 24%;
+        left: -268px;
+        animation: rotate 2s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ell-4 {
+        position: absolute;
+        top: 33%;
+        left: -508px;
+        animation: rotate 3s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ell-5 {
+        position: absolute;
+        top: 46%;
+        left: 8px;
+        animation: rotate 3s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ell-6 {
+        position: absolute;
+        top: 52%;
+        right: -308px;
+        animation: rotate 3s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ell-7 {
+        position: absolute;
+        top: 65%;
+        right: -300px;
+        animation: rotate 3s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ellipse {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ell-8 {
+        position: absolute;
+        top: 80%;
+        right: -608px;
+        animation: rotate 3s linear infinite;
+        overflow: hidden;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    .ell-9 {
+        position: absolute;
+        bottom: -900px;
+        left: -650px;
+        animation: rotate 3s linear infinite;
+        overflow: hidden;
+        will-change: transform;
+        /* 1 секунда, линейная анимация, бесконечно */
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
 
     .nav {
         display: none;
