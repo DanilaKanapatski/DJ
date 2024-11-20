@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         slide.style.width = `${slideWidth}px`;
                         slide.style.height = `${slideHeight}px`;
                     }
+
+                    // Устанавливаем размеры для изображений и видео внутри слайдов
+                    slide.querySelectorAll('.thumbnail, .video-player').forEach(element => {
+                        element.style.width = slide.style.width;
+                        element.style.height = slide.style.height;
+                    });
                 });
             },
             init: function () {
@@ -52,19 +58,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.slides.forEach((slide) => {
                     slide.style.width = `${slideWidth}px`;
                     slide.style.height = `${slideHeight}px`;
+
+                    // Устанавливаем размеры для изображений и видео внутри слайдов
+                    slide.querySelectorAll('.thumbnail, .video-player').forEach(element => {
+                        element.style.width = slide.style.width;
+                        element.style.height = slide.style.height;
+                    });
                 });
 
                 // Устанавливаем размеры для активного слайда
                 const activeSlide = this.slides[this.activeIndex];
                 activeSlide.style.width = `${slideWidth * 1.5}px`;
                 activeSlide.style.height = `${slideHeight * 1.5}px`;
+
+                // Устанавливаем размеры для изображений и видео внутри активного слайда
+                activeSlide.querySelectorAll('.thumbnail, .video-player').forEach(element => {
+                    element.style.width = activeSlide.style.width;
+                    element.style.height = activeSlide.style.height;
+                });
             },
             resize: function () {
                 this.update(); // Обновляем Swiper при изменении размеров экрана
             }
         },
     });
-
 
 
 });
@@ -171,27 +188,106 @@ links.forEach(link => {
 
 document.getElementById('playButton').addEventListener('click', function() {
     let audio = document.getElementById('audioPlayer');
+    let playIcon = document.getElementById('playIcon');
+    let listen = document.getElementById('playButton')
+
     if (audio.paused) {
         audio.play();
+        // Заменяем изображение на паузу
+        playIcon.src = "images/stop.svg";
+        playIcon.style.top = '10px';
+        listen.style.backgroundImage = 'url("images/btn-hover.png")';
     } else {
         audio.pause();
+        // Заменяем изображение на воспроизведение
+        playIcon.src = "images/play.svg";
+        playIcon.style.top = '15px'
+        listen.style.backgroundImage = 'url("images/btn-over.png")';
     }
 });
 
 document.getElementById('playButton2').addEventListener('click', function() {
     let audio = document.getElementById('audioPlayer2');
+    let playIcon = document.getElementById('playIcon2');
+    let listen = document.getElementById('playButton2')
+
     if (audio.paused) {
         audio.play();
+        // Заменяем изображение на паузу
+        playIcon.src = "images/stop.svg";
+        playIcon.style.top = '10px';
+        listen.style.backgroundImage = 'url("images/btn-hover.png")';
     } else {
         audio.pause();
+        // Заменяем изображение на воспроизведение
+        playIcon.src = "images/play.svg";
+        playIcon.style.top = '15px'
+        listen.style.backgroundImage = 'url("images/btn-over.png")';
     }
 });
 
 document.getElementById('playButton3').addEventListener('click', function() {
     let audio = document.getElementById('audioPlayer3');
+    let playIcon = document.getElementById('playIcon3');
+    let listen = document.getElementById('playButton3')
+
     if (audio.paused) {
         audio.play();
+        // Заменяем изображение на паузу
+        playIcon.src = "images/stop.svg";
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            playIcon.style.top = '9px';
+        } else {
+            playIcon.style.top = '10px';
+        }
+        // playIcon.style.top = '10px';
+        listen.style.backgroundImage = 'url("images/btn-hover.png")';
     } else {
         audio.pause();
+        // Заменяем изображение на воспроизведение
+        playIcon.src = "images/play.svg";
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            playIcon.style.top = '13px';
+        } else {
+            playIcon.style.top = '15px';
+        }
+        // playIcon.style.top = '15px'
+        listen.style.backgroundImage = 'url("images/btn-over.png")';
     }
+});
+
+document.querySelectorAll('.video-btn__img').forEach(btn => {
+    btn.addEventListener('click', function() {
+        let thumbnail = this.previousElementSibling;
+        let videoPlayer = this.nextElementSibling;
+
+        // Проверка на наличие элементов
+        if (thumbnail && videoPlayer) {
+            // Скрываем изображение кнопки
+            this.style.display = 'none';
+
+            // Скрываем изображение
+            thumbnail.style.display = 'none';
+
+            // Получаем размеры слайда
+            let slide = this.closest('.swiper-slide');
+            let slideWidth = slide.offsetWidth;
+            let slideHeight = slide.offsetHeight;
+
+            // Проверяем, что размеры не равны нулю
+            if (slideWidth > 0 && slideHeight > 0) {
+                // Устанавливаем размеры видео
+                videoPlayer.style.width = slideWidth + 'px';
+                videoPlayer.style.height = slideHeight + 'px';
+
+                // Показываем видео
+                videoPlayer.style.display = 'block';
+                videoPlayer.play();
+            } else {
+                console.error('Размеры слайда равны нулю');
+            }
+        } else {
+            console.error('Не удалось найти элементы thumbnail или videoPlayer');
+        }
+    });
 });

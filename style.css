@@ -808,11 +808,19 @@ ul {
 .listen-list__link svg {
     z-index: 1000;
     position: absolute;
+    /*top: 15px;*/
+    /*right: 38px;*/
+    /*width: 25px;*/
+    /*height: 25px;*/
+}
+
+.listen-list__link img {
+    z-index: 1000;
+    position: absolute;
     top: 15px;
     right: 48px;
-    width: 19px;
-    height: 15px;
 }
+
 
 .listen-list__link a {
     color: inherit;
@@ -1094,8 +1102,8 @@ ul {
 }
 
 .swiper-container-2 .swiper-slide img {
-    width: 100%; /* Установить ширину на 100% */
-    height: 100%; /* Установить высоту на 100% */
+    /*width: 100%; !* Установить ширину на 100% *!*/
+    /*height: 100%; !* Установить высоту на 100% *!*/
     object-fit: cover; /* Обрезка изображений, чтобы они заполнили слайд */
     z-index: 100;
 }
@@ -1109,6 +1117,10 @@ ul {
     z-index: 100;
 }
 
+.thumbnail {
+    position: relative;
+}
+
 .video-btn {
     display: none;
     position: absolute;
@@ -1119,9 +1131,13 @@ ul {
     z-index: 10000;
 }
 
-.video-btn .video-btn__img {
-    width: auto;
-    height: auto;
+.video-btn__img {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
 }
 
 .swiper-container-2 .swiper-slide-active .video-btn {
@@ -2006,9 +2022,9 @@ footer {
         gap: 60px;
     }
 
-    .listen-list img {
-        width: 100%;
-    }
+    /*.listen-list img {*/
+    /*    width: 100%;*/
+    /*}*/
 
     .listen-list__img--none {
         display: none;
@@ -2268,10 +2284,19 @@ footer {
         transform: scale(1.5); /* Увеличение активного слайда на 50% */
     }
 
-    .swiper-container-2 .swiper-slide img {
-        width: 100%; /* Установить ширину на 100% */
-        height: 100%; /* Установить высоту на 100% */
-        object-fit: cover; /* Обрезка изображений, чтобы они заполнили слайд */
+    /*.swiper-container-2 .swiper-slide img {*/
+    /*    width: 100%; !* Установить ширину на 100% *!*/
+    /*    height: 100%; !* Установить высоту на 100% *!*/
+    /*    object-fit: cover; !* Обрезка изображений, чтобы они заполнили слайд *!*/
+    /*}*/
+
+    .video-btn__img {
+        cursor: pointer;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        left: 50%;
     }
 
     /* Скрываем часть боковых слайдов */
@@ -2487,6 +2512,13 @@ footer {
 
     .active .title {
         font-size: 30px;
+    }
+
+    .listen-list__link img {
+        z-index: 1000;
+        position: absolute;
+        top: 13px;
+        right: 48px;
     }
 }
 
