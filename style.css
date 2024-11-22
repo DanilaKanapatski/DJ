@@ -1853,6 +1853,7 @@ footer {
 
     .about-title {
         font-size: 50px;
+        margin-top: 80px;
     }
 
     .about-desc {
@@ -1899,6 +1900,14 @@ footer {
 
     .diplomas-list__img-mob {
         display: block;
+    }
+
+    .listen-list__img {
+        width: 100%;
+    }
+
+    .listen-list__img img:first-child {
+        width: 100%;
     }
 
     .diplomas-list__desc {
