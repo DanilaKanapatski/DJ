@@ -144,6 +144,7 @@ body {
     background: #1D1D1F;
     color: #fff;
     overflow-x: hidden;
+
 }
 
 .ell-1 {
@@ -224,13 +225,18 @@ body {
 }
 
 .ell-9 {
+    overflow: hidden;
     position: absolute;
     bottom: -520px;
     left: -500px;
     animation: rotate 3s linear infinite;
-    overflow: hidden;
     will-change: transform;
     /* 1 секунда, линейная анимация, бесконечно */
+}
+
+.overflow{
+    overflow: hidden;
+
 }
 
 @keyframes rotate {
@@ -269,6 +275,7 @@ ul {
     background-image: url("./images/main.png");
     height: 100vh;
     background-size: cover;
+    overflow: hidden;
 }
 
 
@@ -503,6 +510,16 @@ ul {
     transform-origin: center;
 }
 
+main {
+    overflow: hidden;
+}
+
+
+
+/*footer {*/
+/*    overflow: hidden;*/
+/*}*/
+
 .main-title {
     font-family: "Jura", sans-serif;
     font-weight: 700;
@@ -558,8 +575,11 @@ ul {
     font-size: 18px;
     color: #fff;
     margin-top: 15px;
-    margin-bottom: 100px;
     /*vertical-align: top;*/
+}
+
+.about-desc:nth-child(4) {
+    margin-bottom: 70px;
 }
 
 .about-list {
@@ -745,7 +765,7 @@ ul {
 }
 
 .listen-list {
-    margin-top: 115px;
+    margin-top: 100px;
     display: flex;
     gap: 100px 67px;
     flex-wrap: wrap;
@@ -1838,6 +1858,10 @@ footer {
     .about-desc {
         font-size: 14px;
         margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .about-desc:nth-child(4) {
         margin-bottom: 50px;
     }
 

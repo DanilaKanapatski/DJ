@@ -291,3 +291,27 @@ document.querySelectorAll('.video-btn__img').forEach(btn => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Плавный скролл к якорям
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Убедимся, что overflow: hidden работает после скролла
+    window.addEventListener('scroll', function() {
+        const ellipse = document.querySelector('.ellipse');
+        ellipse.style.overflow = 'hidden';
+    });
+});
