@@ -1057,7 +1057,8 @@ main {
 
 .video {
     height: 734px;
-    z-index: 10;
+    position: relative;
+    /*z-index: 10;*/
 }
 
 .video .video-content {
@@ -1089,8 +1090,8 @@ main {
 }
 
 .swiper-pagination {
-    position: relative !important;
-    margin-top: 30px;
+    position: absolute !important;
+    bottom: -30px !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -1110,7 +1111,7 @@ main {
     width: 592px; /* Размер боковых слайдов */
     height: 333px;
     opacity: 0.5; /* Полупрозрачные боковые слайды */
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     z-index: 100;
 }
 
@@ -2294,7 +2295,8 @@ footer {
     }
 
     .swiper-pagination {
-        margin-top: 15px;
+        position: absolute !important;
+        bottom: -30px !important;
     }
 
     .swiper-container-2 {
@@ -2308,7 +2310,7 @@ footer {
         width: 200px; /* Размер боковых слайдов */
         height: 112.5px;
         opacity: 0.5; /* Полупрозрачные боковые слайды */
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
     }
 
     /* Активный слайд больше и по центру */
